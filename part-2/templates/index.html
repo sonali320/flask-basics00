@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Flask Templates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+        <h1>Welcome to My Flask App!</h1>
+
+        <p>This page is served using Flask and render_template. <code>templates/</code> folder.</p>
+
+        <div class="highlight">
+            <strong>What is Flask?</strong>
+            <p>
+            Flask is a lightweight Python web framework.
+            It helps you build web apps quickly and easily.
+        </p>
+
+        </div>
+
+        <h2>What You’ll Learn</h2>
+        <ul>
+            <li>Routing</li>
+            <li>Templates</li>
+            <li>Forms</li>
+            <li>Databases</li>
+        </ul>
+    </div>
+</body>
+</html>
