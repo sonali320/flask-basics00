@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Blog | {{ info.name }}{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Blog Section -->
+<div class="card">
+    <h2>My Blog</h2>
+    <p>
+        I share my learning journey, tutorials, and thoughts on Python,
+        Flask, AI, and web development.
+    </p>
+
+    {% for post in posts %}
+    <div class="blog-item">
+        <h3>{{ post.title }}</h3>
+        <small>
+            {{ post.date }} · {{ post.category }}
+        </small>
+        <p>{{ post.summary }}</p>
+        <a href="#" class="btn btn-primary btn-sm">Read More</a>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- About Blog -->
+<div class="card">
+    <h2>About This Page</h2>
+    <ul>
+        <li>Dynamic blog posts using Jinja2 loops</li>
+        <li>Data passed from Flask to templates</li>
+        <li>Template inheritance with base layout</li>
+        <li>Shared CSS styling</li>
+    </ul>
+</div>
+
+<div class="info-box success">
+    <strong>Tip:</strong>
+    <p>You can later connect this blog to a database and add full blog pages.</p>
+</div>
+
+{% endblock %}

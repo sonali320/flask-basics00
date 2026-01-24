@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}About | {{ info.name }}{% endblock %}
+
+{% block content %}
+
+<!-- About Section -->
+<div class="card">
+    <h2>About Me</h2>
+    <p style="font-size: 18px; margin-bottom: 20px;">
+        {{ info.bio }}
+    </p>
+
+    <div class="info-box">
+        <p>Hello! I’m an Artificial Intelligence and Data Science student with a strong interest in backend development. I’m currently learning Python, Flask, SQL, and web technologies.</p>
+    </div>
+</div>
+
+<!-- Skills Section -->
+<div class="card">
+    <h2>My Skills</h2>
+    <p style="margin-bottom: 20px;">
+        Here are my technical skills with proficiency levels:
+    </p>
+
+    {% for skill in skills %}
+    <div class="skill-item">
+        <div class="skill-name">
+            <span>{{ skill.name }}</span>
+            <span>{{ skill.level }}%</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: {{ skill.level }}%;"></div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>For Loop Magic:</strong>
+        <p>The skills above are rendered using a Jinja2 for loop:</p>
+    <code style="display: block; margin-top: 10px; background: #edf2f7; padding: 10px; border-radius: 5px;">
+    {&percnt; for skill in skills &percnt;}<br>
+    &nbsp;&nbsp;&#123;&#123; skill.name &#125;&#125; - &#123;&#123; skill.level &#125;&#125;&percnt;<br>
+    {&percnt; endfor &percnt;}
+</code>
+
+    </div>
+</div>
+
+<!-- Learning Section -->
+<div class="card">
+    <h2>What I'm Learning</h2>
+    <ul style="margin-left: 20px;">
+        <li>Python & Flask for backend development</li>
+        <li>HTML, CSS, and JavaScript for frontend</li>
+        <li>Database management with SQL</li>
+        <li>Version control with Git</li>
+        <li>RESTful API design</li>
+    </ul>
+</div>
+
+{% endblock %}
